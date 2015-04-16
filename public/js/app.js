@@ -27,7 +27,7 @@ app.controller("OnlineUniversityController", function ($scope, $http) {
     // show modal when add course button is clicked
     $scope.addCourse = function () {
         $scope.add = true;
-        $scope.newCourse = { name: "", category: "", dateCreated: new Date(), description: "" }
+        $scope.newCourse = { name: "", category: "", dateCreated: new Date(), description: "" };
         $scope.selectedcourseindex = null;
         $("#add-modal").modal();
     };
@@ -56,11 +56,11 @@ app.controller("OnlineUniversityController", function ($scope, $http) {
         }
 
         $("#add-modal").modal('hide');
-    }
+    };
 
     $scope.formatDate = function (date) {
         var formatteddate = new Date(date).toISOString().substring(0, 10);
         return formatteddate;
-    }
+    };
 
 });
